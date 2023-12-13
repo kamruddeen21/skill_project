@@ -71,9 +71,13 @@ class _LoginScreenState extends State<LoginScreen> {
             changeButton = true;
           });
           await Future.delayed(const Duration(seconds: 1));
-                  Navigator.push(context, MaterialPageRoute(builder: (context){
+              await    Navigator.push(context, MaterialPageRoute(builder: (context){
     return const HomeScreen();
    }));
+    setState((){
+            changeButton = false;
+          });
+
                 },
                 child: AnimatedContainer(
                   duration: const Duration(seconds: 1),
